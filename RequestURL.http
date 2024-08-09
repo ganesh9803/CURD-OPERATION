@@ -1,0 +1,160 @@
+//new user Register rahul-Admin
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "rahul123",
+    "email": "rahul@123.com",
+    "password": "rahul@123",
+    "role": "admin"
+}
+
+###
+
+//new user Register ganesh-Manager
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "ganesh123",
+    "email": "ganesh@123.com",
+    "password": "ganesh@123",
+    "role": "manager"
+}
+
+###
+
+//new user Register meena-Staff
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "meena123",
+    "email": "meena@123.com",
+    "password": "meena@123",
+    "role": "staff"
+}
+
+###
+
+
+// Rahul123 log In
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "rahul123",
+    "password": "rahul@123"
+
+}
+
+###
+
+// ganesh123 log In
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "ganesh123",
+    "password": "ganesh@123"
+
+}
+
+###
+
+// meena123 log In
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "meena123",
+    "password": "meena@123"
+
+}
+
+###
+
+//Rahul123-Admin get jwt Token
+POST http://localhost:3000/login_token/
+Content-Type: application/json
+
+{
+    "username": "rahul123",
+    "password": "rahul@123"
+
+}
+
+###
+
+//ganesh123-Manager get jwt Token
+POST http://localhost:3000/login_token/
+Content-Type: application/json
+
+{
+    "username": "ganesh123",
+    "password": "ganesh@123"
+
+}
+
+###
+
+// meena123-Staff get jwt Token
+POST http://localhost:3000/login_token/
+Content-Type: application/json
+
+{
+    "username": "meena123",
+    "password": "meena@123"
+
+}
+
+
+###
+// get all products Details using jwtToken Rahul123-Admin
+GET http://localhost:3000/products/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIzMjE2NTA1fQ.5teA4HG0rtXUlPZz0zYLsgjCw11PBmI-svxkvvcXSog
+###
+
+// get all products Details using jwtToken Rahul123-Admin
+GET http://localhost:3000/products/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIzMjE2NTA1fQ.5teA4HG0rtXUlPZz0zYLsgjCw11PBmI-svxkvvcXSog
+###
+
+// new product added to the user Table created rahul122 Admin
+POST http://localhost:3000/products/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIzMjE2NTA1fQ.5teA4HG0rtXUlPZz0zYLsgjCw11PBmI-svxkvvcXSog
+Content-Type: application/json
+
+{
+    "title": "Smartwatch",
+    "description": "Water-resistant smartwatch with heart rate monitor.",
+    "inventory_count": 150
+}
+
+###
+
+// product deleted by rahul122 Admin
+DELETE  http://localhost:3000/products/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIzMjE2NTA1fQ.5teA4HG0rtXUlPZz0zYLsgjCw11PBmI-svxkvvcXSog
+
+###
+
+// product update by rahul122 Admin
+DELETE http://localhost:3000/products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIzMjE2NTA1fQ.5teA4HG0rtXUlPZz0zYLsgjCw11PBmI-svxkvvcXSog
+Content-Type: application/json
+
+{
+    "title": "Updated Laptop",
+    "description": "Updated description for high-performance laptop.",
+    "inventory_count": 60
+}
+
+###
+
+// get products using jwtToken ganesh-Manager
+GET http://localhost:3000/products/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdhbmVzaDEyMyIsInJvbGUiOiJtYW5hZ2VyIiwiaWF0IjoxNzIzMjE3MTI3fQ.MYC2DcUTdEgkn9_c13uBDK9dtCzR2vGlBy5_HjB9au0
+###
+
+
