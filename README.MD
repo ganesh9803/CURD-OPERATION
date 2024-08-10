@@ -1,4 +1,4 @@
-# Twitter
+# CURD-OPERATIN
 
 Given an `index.js` file and a database file `Products.DB.db` consisting of five tables `users`, `Products`.
 
