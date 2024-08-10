@@ -1,4 +1,4 @@
-# CURD-OPERATIN
+# CURD-OPERATION
 
 Given an `index.js` file and a database file `Products.DB.db` consisting of five tables `users`, `Products`.
 
